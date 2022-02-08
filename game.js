@@ -17,11 +17,31 @@ const pauseButton = document.getElementById("pause")
 let timerID = null
 let gamePaused = false
 
+const upButton = document.getElementById("up")
+const downButton = document.getElementById("down")
+const leftButton = document.getElementById("left")
+const rightButton = document.getElementById("right")
+
+const yesButton = document.getElementById("yes")
+const noButton = document.getElementById("no")
+
 
 startButton.addEventListener("click", start)
 restartButton.addEventListener("click", restart)
 pauseButton.addEventListener("click", pause)
 
+yesButton.addEventListener("click", function() {
+  document.querySelector("#navigation-buttons").style.display = "inline-block"
+  document.querySelector("p").style.display = "none"
+  yesButton.style.display = "none"
+  noButton.style.display = "none"
+})
+
+noButton.addEventListener("click", function() {
+  document.querySelector("p").style.display = "none"
+  yesButton.style.display = "none"
+  noButton.style.display = "none"
+})
 
 //The squares are created and pushed into the squares array
 
@@ -55,6 +75,22 @@ document.addEventListener("keyup", function(e) {
     direction = -square_count
   }
 
+})
+
+upButton.addEventListener("click", function() {
+  direction = -square_count
+})
+
+downButton.addEventListener("click", function() {
+  direction = square_count
+})
+
+rightButton.addEventListener("click", function() {
+  direction = 1
+})
+
+leftButton.addEventListener("click", function() {
+  direction = -1
 })
 
 

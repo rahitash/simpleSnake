@@ -58,6 +58,27 @@ button {
   background-color: #FF6363;
 }
 
+.mobile-buttons {
+  background-color: transparent;
+  padding: 0;
+  margin: 10px;
+  font-size: 50px;
+}
+
+#navigation-buttons {
+  display: none;
+}
+
+.question {
+  font-size: 15px;
+  padding: 18px 25px;
+  margin: 10px 0px;
+}
+
+p {
+  font-size: 15px;
+}
+
 #restart, #pause {
   display: none;
 }
